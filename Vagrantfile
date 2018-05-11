@@ -33,8 +33,4 @@ echo Restart apache
 sudo service apache2 restart
 SCRIPT
     end
-
-    config.vm.provision "always", type: "shell", run: "always" do |always|
-        always.inline = '/home/vagrant/.rbenv/shims/mailcatcher --http-ip=0.0.0.0'
-    end
 end
